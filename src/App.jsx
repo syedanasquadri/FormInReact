@@ -1,27 +1,24 @@
 import { useState } from "react"
 const App = () => {
   const [InputVal, setInputVal] = useState("");
-
+  const [name,setname] = useState("");
   const handleChange = (e) => {
     setInputVal(e.target.value)
   }
 
-  const handleSubmit = () => {
-    
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setname(InputVal)
   }
 
-  console.log(InputVal)
+  console.log(InputVal);
   return <div>
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <label htmlFor="">Name</label><br />
       <input type="text" onChange={handleChange}/><br />
-      <label htmlFor="">Age</label><br />
-      <input type="text" onChange={handleChange}/><br />
-      <label htmlFor="">Gender</label><br />
-      <input type="text" onChange={handleChange}/><br />
-      <button type="submit">Submit</button>
+      <button >submit</button>
     </form>
-    
+    <ul>{name}</ul>
   </div>
 }
 export default App
