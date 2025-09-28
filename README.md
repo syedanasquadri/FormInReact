@@ -1,1 +1,1 @@
-
+This is practise project in react. It helped me get strong with my fundamentals.
