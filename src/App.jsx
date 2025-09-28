@@ -8,6 +8,10 @@ const App = () => {
     } 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(!form.name | !form.age | !form.course ){
+            alert("Fill all the fields")
+            return;
+        }
         setleads([...leads,form]);
         setform({name: "", age: "", course: ""});
     }
