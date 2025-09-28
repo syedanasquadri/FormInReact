@@ -1,11 +1,10 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const App = () => {
     const [form, setform] = useState({name:"", age:"" ,course:""});
     const [leads, setleads] = useState([]);
     const handleChange = (e) =>{
         setform({...form, [e.target.name] : e.target.value});
-        
     } 
     const handleSubmit = (e) => {
         e.preventDefault();
