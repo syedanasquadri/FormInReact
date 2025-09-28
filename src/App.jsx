@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const App = () => {
     const [form, setform] = useState({name:"", age:"" ,course:""});
     const [leads, setleads] = useState([]);
+
+     // ✅ Load leads from localStorage on first render
+  useEffect(() => {
+    const storedLeads = localStorage.getItem("leads");
+    if (storedLeads) {
+      setleads(JSON.parse(storedLeads));
+    }
+  }, []);
+
+  // ✅ Save leads to localStorage whenever leads change
+//   useEffect(() => {
+//     localStorage.setItem("leads", JSON.stringify(leads));
+//   }, [leads]);
+
+useEffect(() => {
+    localStorage.setItem("leads",JSON.stringify(leads))
+},[leads])
+
     const handleChange = (e) =>{
         setform({...form, [e.target.name] : e.target.value});
     } 
@@ -15,6 +33,7 @@ const App = () => {
         setleads([...leads,form]);
         setform({name: "", age: "", course: ""});
     }
+
     return <div>
         <form onSubmit={handleSubmit}>
             <label htmlFor="">Name</label><br />
