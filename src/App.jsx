@@ -27,7 +27,7 @@ const App = () => {
         </form>
          <ul>
          {/* {leads.map((leads,index) => <li key={index}>{leads.name} - {leads.age} - {leads.course}</li>)} */}
-         {leads.map((_,index) => <li key={index}>{_}</li>)}
+         {leads.map((lead,index) => <li key={index}>{lead.name} - {lead.age} - {lead.course}</li>)}
         </ul>
     </div>
 }
