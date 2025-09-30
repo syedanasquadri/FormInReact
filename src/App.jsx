@@ -4,29 +4,17 @@ const App = () => {
     const [form, setform] = useState({name:"", age:"" ,course:""});
     const [leads, setleads] = useState([]);
 
-     // ✅ Load leads from localStorage on first render
   useEffect(() => {
-    const storedLeads = localStorage.getItem("leads");
-    if (storedLeads) {
-      setleads(JSON.parse(storedLeads));
-    }
-  }, []);
-
-  // ✅ Save leads to localStorage whenever leads change
-//   useEffect(() => {
-//     localStorage.setItem("leads", JSON.stringify(leads));
-//   }, [leads]);
-
-useEffect(() => {
     localStorage.setItem("leads",JSON.stringify(leads))
-},[leads])
+  },[leads])
+
 
     const handleChange = (e) =>{
         setform({...form, [e.target.name] : e.target.value});
     } 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!form.name | !form.age | !form.course ){
+        if(!form.name || !form.age || !form.course ){
             alert("Fill all the fields")
             return;
         }
@@ -54,3 +42,4 @@ useEffect(() => {
 }
 
 export default App
+
