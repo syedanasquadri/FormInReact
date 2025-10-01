@@ -1,0 +1,18 @@
+{
+  "leads": [
+    {
+      "id": "dc91",
+      "name": "syeda bibi sara",
+      "age": "26",
+      "course": "Cloud",
+      "level": "Pro"
+    },
+    {
+      "id": "c47f",
+      "name": "Syed Anas Quadri ",
+      "age": "19",
+      "course": "Cloud",
+      "level": "Beginner"
+    }
+  ]
+}
