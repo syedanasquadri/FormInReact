@@ -1,17 +1,38 @@
 {
   "leads": [
     {
-      "id": "dc91",
-      "name": "syeda bibi sara",
+      "id": "3845",
+      "name": "Syed Anas Quadri ",
+      "age": "19",
+      "course": "electrical",
+      "level": "Beginner"
+    },
+    {
+      "id": "c362",
+      "name": "Syed Anas Quadri ",
+      "age": "19",
+      "course": "Data Science",
+      "level": "Beginner"
+    },
+    {
+      "id": "9761",
+      "name": "Syed Anas Quadri ",
+      "age": "19",
+      "course": "Data Science",
+      "level": "Beginner"
+    },
+    {
+      "id": "b6dd",
+      "name": "Syed Anas Quadri ",
       "age": "26",
-      "course": "Cloud",
+      "course": "cs",
       "level": "Pro"
     },
     {
-      "id": "c47f",
+      "id": "c28c",
       "name": "Syed Anas Quadri ",
-      "age": "19",
-      "course": "Cloud",
+      "age": "26",
+      "course": "Data Science",
       "level": "Beginner"
     }
   ]
