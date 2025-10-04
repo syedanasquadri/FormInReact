@@ -9,11 +9,12 @@ const App = () => {
     level: "",
   });
   const [leads, setLeads] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredLeads = leads.filter((lead) => 
-    lead.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
+const [searchQuery, setSearchQuery] = useState("");
+const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(searchQuery.toLowerCase())))
+
 
   // Load leads from local "db.json" via json-server
   useEffect(() => {
@@ -94,7 +95,6 @@ const App = () => {
                 </select>
                 <br />
                 <br />
-
                 <button type="submit">Submit</button>
               </form>
             </div>
@@ -109,25 +109,24 @@ const App = () => {
                type="text"
                placeholder="Search by name..."
                value={searchQuery}
-               onChange={(e) => setSearchQuery(e.target.value)} />
-               {/* ✅ Filtered List */}
-              <ul>
-                {filteredLeads.map((lead) => (
-                  <li key={lead.id}>
-                    {lead.name} - {lead.age} - {lead.course} - {lead.level}
+               onChange={(e) => {setSearchQuery(e.target.value)}}
+                />
+                <ul>
+                  {filteredLeads.map((lead) => (
+                    <li>
+                    {lead.name}-{lead.age}-{lead.course}-{leads.level}
                   </li>
                 ))}
-              </ul>
-              <br />
-              <br />
-              <br />
-              {/* <ul>
+                </ul>
+
+              <ul>
                 {leads.map((lead) => (
                   <li key={lead.id}>
                     {lead.name} - {lead.age} - {lead.course} - {lead.level}
                   </li>
                 ))}
-              </ul> */}
+              </ul>
+
             </div>
           }
         />
