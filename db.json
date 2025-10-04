@@ -20,6 +20,14 @@
       "age": "26",
       "course": "Cloud",
       "level": "Beginner"
+    },
+    {
+      "id": "9182",
+      "name": "Ujjwal MJ",
+      "age": "21",
+      "course": "UI / UX",
+      "level": "Beginner",
+      "createdAt": "10/4/2025, 10:15:52 PM"
     }
   ]
 }
