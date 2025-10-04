@@ -7,6 +7,7 @@ const App = () => {
     age: "",
     course: "",
     level: "",
+    createdAt: new Date().toLocaleString()
   });
   const [leads, setLeads] = useState([]);
   // const [searchQuery, setSearchQuery] = useState("");
@@ -33,7 +34,7 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
       alert("Fill all the fields.");
       return;
     }
-    //saving data in db.json
+    //saving data in db.json            
     fetch("http://localhost:5000/leads", {
       method: "Post",
       headers: { "Content-Type": "application/json" },
@@ -114,7 +115,7 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
                 <ul>
                   {filteredLeads.map((lead) => (
                     <li>
-                    {lead.name}-{lead.age}-{lead.course}-{leads.level}
+                    {lead.name}-{lead.age}-{lead.course}-{leads.level}-{lead.createdAt}
                   </li>
                 ))}
                 </ul>
@@ -122,7 +123,7 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
               <ul>
                 {leads.map((lead) => (
                   <li key={lead.id}>
-                    {lead.name} - {lead.age} - {lead.course} - {lead.level}
+                    {lead.name} - {lead.age} - {lead.course} - {lead.level} - {lead.createdAt}
                   </li>
                 ))}
               </ul>
