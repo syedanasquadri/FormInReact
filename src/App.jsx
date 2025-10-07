@@ -7,15 +7,15 @@ const App = () => {
     age: "",
     course: "",
     level: "",
-    createdAt: new Date().toLocaleString()
+    createdAt: new Date().toLocaleString(),
   });
   const [leads, setLeads] = useState([]);
   // const [searchQuery, setSearchQuery] = useState("");
 
-
-const [searchQuery, setSearchQuery] = useState("");
-const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(searchQuery.toLowerCase())))
-
+  const [searchQuery, setSearchQuery] = useState("");
+  const filteredLeads = leads.filter((lead) =>
+    lead.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   // Load leads from local "db.json" via json-server
   useEffect(() => {
@@ -34,7 +34,7 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
       alert("Fill all the fields.");
       return;
     }
-    //saving data in db.json            
+    //saving data in db.json
     fetch("http://localhost:5000/leads", {
       method: "Post",
       headers: { "Content-Type": "application/json" },
@@ -66,7 +66,6 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
                   value={form.name}
                 />
                 <br />
-
                 <label>Age</label>
                 <br />
                 <input
@@ -107,27 +106,30 @@ const filteredLeads =leads.filter((lead) => (lead.name.toLowerCase().includes(se
             <div>
               <h3>leads</h3>
               <input
-               type="text"
-               placeholder="Search by name..."
-               value={searchQuery}
-               onChange={(e) => {setSearchQuery(e.target.value)}}
-                />
-                <ul>
-                  {filteredLeads.map((lead) => (
-                    <li>
-                    {lead.name}-{lead.age}-{lead.course}-{leads.level}-{lead.createdAt}
-                  </li>
-                ))}
-                </ul>
-
+                type="text"
+                placeholder="Search by name..."
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                }}
+              />
               <ul>
-                {leads.map((lead) => (
+                {filteredLeads.map((lead) => (
                   <li key={lead.id}>
-                    {lead.name} - {lead.age} - {lead.course} - {lead.level} - {lead.createdAt}
+                    {lead.name}-{lead.age}-{lead.course}-{lead.level}- 
+                  {lead.createdAt}
                   </li>
                 ))}
               </ul>
 
+              <ul>
+                {leads.map((lead) => (
+                  <li key={lead.id}>
+                    {lead.name} - {lead.age} - {lead.course} - {lead.level} -{" "}
+                    {lead.createdAt}
+                  </li>
+                ))}
+              </ul>
             </div>
           }
         />

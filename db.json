@@ -1,20 +1,6 @@
 {
   "leads": [
     {
-      "id": "4d02",
-      "name": "Syed Anas Quadri ",
-      "age": "19",
-      "course": "electrical",
-      "level": "Beginner"
-    },
-    {
-      "id": "bbf0",
-      "name": "prakhar mishra",
-      "age": "22",
-      "course": "cs",
-      "level": "Pro"
-    },
-    {
       "id": "c938",
       "name": "ayan",
       "age": "26",
@@ -28,6 +14,14 @@
       "course": "UI / UX",
       "level": "Beginner",
       "createdAt": "10/4/2025, 10:15:52 PM"
+    },
+    {
+      "id": "854e",
+      "name": "Syed Anas Quadri ",
+      "age": "21",
+      "course": "electrical",
+      "level": "Beginner",
+      "createdAt": "10/7/2025, 9:33:52 PM"
     }
   ]
 }
