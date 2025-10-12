@@ -1,27 +1,20 @@
 {
   "leads": [
     {
-      "id": "c938",
-      "name": "ayan",
-      "age": "26",
-      "course": "Cloud",
-      "level": "Beginner"
+      "id": "9f7b",
+      "name": "dhanush",
+      "age": "21",
+      "course": "eee",
+      "level": "Pro",
+      "createdAt": "10/12/2025, 11:22:18 PM"
     },
     {
-      "id": "9182",
+      "id": "dac9",
       "name": "Ujjwal MJ",
-      "age": "21",
-      "course": "UI / UX",
+      "age": "19",
+      "course": "...",
       "level": "Beginner",
-      "createdAt": "10/4/2025, 10:15:52 PM"
-    },
-    {
-      "id": "854e",
-      "name": "Syed Anas Quadri ",
-      "age": "21",
-      "course": "electrical",
-      "level": "Beginner",
-      "createdAt": "10/7/2025, 9:33:52 PM"
+      "createdAt": "10/12/2025, 11:22:50 PM"
     }
   ]
 }
